@@ -6,7 +6,8 @@ def create_config(path):
     # Create a default config file
     config = configparser.ConfigParser(allow_no_value=True)
     config.add_section("Type")
-    config.set("Type", "# You can use 3 types: pickle, json, yml. (Default - pickle)")
+    config.set("Type",
+               "# You can use 3 types: pickle, json, yml. (Default - pickle)")
     config.set("Type", "file_type", "pickle")
 
     with open(path, "w") as config_file:

@@ -31,7 +31,8 @@ def convert_to_normal_format(obj):
         twspeed = float(obj[i][3])
         twdirect = obj[i][4]
         tprec = obj[i][5]
-        ttmp = {tdate_trunc: [ttemp, tpreasure, thumidity, twspeed, twdirect, tprec]}
+        ttmp = {tdate_trunc: [ttemp, tpreasure, thumidity,
+                              twspeed, twdirect, tprec]}
         tmp.update(ttmp)
     return tmp
 
@@ -72,7 +73,7 @@ def open_data(obj, type):
 
 def save_data(obj, type):
     if type == "pickle":
-        with open('weather.pickle', 'wb') as weatherFile:       # open file with data
+        with open('weather.pickle', 'wb') as weatherFile:
             pickle.dump(obj, weatherFile)                       # save data
         print("Successfully saved.")
 
