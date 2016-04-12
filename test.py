@@ -20,7 +20,7 @@ def get_Date(year, month, day):
         return tmp.isoformat()
 
 
-def get_temp(tmpp):
+def get_temp(temporary):
     """
     >>> get_temp(+9)
     9
@@ -29,7 +29,7 @@ def get_temp(tmpp):
     """
     while True:
         try:
-            tmp = int(tmpp)
+            tmp = int(temporary)
         except ValueError:                                  
             print('Values is not correct. Try again.')
             break
